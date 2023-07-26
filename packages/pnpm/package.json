@@ -1,0 +1,26 @@
+{
+  "name": "@baicie/pnpm",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "bin": {
+    "bnpm": "bin/bnpm.js"
+  },
+  "scripts": {
+    "dev": "rimraf dist && pnpm run build-bundle -w",
+    "cli": "node ./dist/node/cli.js",
+    "build-bundle": "rollup --config rollup.config.ts --configPlugin @rollup/plugin-typescript"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cac": "^6.7.14",
+    "ora": "^6.3.1"
+  },
+  "files": [
+    "bin",
+    "dist"
+  ]
+}
